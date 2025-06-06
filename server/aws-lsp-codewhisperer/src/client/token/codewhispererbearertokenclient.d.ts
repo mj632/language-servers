@@ -4,12 +4,12 @@
  * DO NOT EDIT BY HAND.
  */
 
-import {Request} from 'aws-sdk/lib/request';
-import {Response} from 'aws-sdk/lib/response';
-import {AWSError} from 'aws-sdk/lib/error';
-import {Service} from 'aws-sdk/lib/service';
-import {ServiceConfigurationOptions} from 'aws-sdk/lib/service';
-import {ConfigBase as Config} from 'aws-sdk/lib/config-base';
+import { Request } from 'aws-sdk/lib/request';
+import { Response } from 'aws-sdk/lib/response';
+import { AWSError } from 'aws-sdk/lib/error';
+import { Service } from 'aws-sdk/lib/service';
+import { ServiceConfigurationOptions } from 'aws-sdk/lib/service';
+import { ConfigBase as Config } from 'aws-sdk/lib/config-base';
 interface Blob {}
 declare class CodeWhispererBearerTokenClient extends Service {
   /**
@@ -18,191 +18,348 @@ declare class CodeWhispererBearerTokenClient extends Service {
   constructor(options?: CodeWhispererBearerTokenClient.Types.ClientConfiguration)
   config: Config & CodeWhispererBearerTokenClient.Types.ClientConfiguration;
   /**
-   * 
+   * Creates a pre-signed, S3 write URL for uploading a repository zip archive.
    */
   createArtifactUploadUrl(params: CodeWhispererBearerTokenClient.Types.CreateUploadUrlRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.CreateUploadUrlResponse) => void): Request<CodeWhispererBearerTokenClient.Types.CreateUploadUrlResponse, AWSError>;
   /**
-   * 
+   * Creates a pre-signed, S3 write URL for uploading a repository zip archive.
    */
   createArtifactUploadUrl(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.CreateUploadUrlResponse) => void): Request<CodeWhispererBearerTokenClient.Types.CreateUploadUrlResponse, AWSError>;
   /**
-   * 
+   * API to create task assist conversation.
    */
   createTaskAssistConversation(params: CodeWhispererBearerTokenClient.Types.CreateTaskAssistConversationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.CreateTaskAssistConversationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.CreateTaskAssistConversationResponse, AWSError>;
   /**
-   * 
+   * API to create task assist conversation.
    */
   createTaskAssistConversation(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.CreateTaskAssistConversationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.CreateTaskAssistConversationResponse, AWSError>;
   /**
-   * 
+   * Creates a pre-signed, S3 write URL for uploading a repository zip archive.
    */
   createUploadUrl(params: CodeWhispererBearerTokenClient.Types.CreateUploadUrlRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.CreateUploadUrlResponse) => void): Request<CodeWhispererBearerTokenClient.Types.CreateUploadUrlResponse, AWSError>;
   /**
-   * 
+   * Creates a pre-signed, S3 write URL for uploading a repository zip archive.
    */
   createUploadUrl(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.CreateUploadUrlResponse) => void): Request<CodeWhispererBearerTokenClient.Types.CreateUploadUrlResponse, AWSError>;
   /**
-   * 
+   * Create a workspace based on a workspace root
+   */
+  createWorkspace(params: CodeWhispererBearerTokenClient.Types.CreateWorkspaceRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.CreateWorkspaceResponse) => void): Request<CodeWhispererBearerTokenClient.Types.CreateWorkspaceResponse, AWSError>;
+  /**
+   * Create a workspace based on a workspace root
+   */
+  createWorkspace(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.CreateWorkspaceResponse) => void): Request<CodeWhispererBearerTokenClient.Types.CreateWorkspaceResponse, AWSError>;
+  /**
+   * API to delete task assist conversation.
    */
   deleteTaskAssistConversation(params: CodeWhispererBearerTokenClient.Types.DeleteTaskAssistConversationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.DeleteTaskAssistConversationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.DeleteTaskAssistConversationResponse, AWSError>;
   /**
-   * 
+   * API to delete task assist conversation.
    */
   deleteTaskAssistConversation(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.DeleteTaskAssistConversationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.DeleteTaskAssistConversationResponse, AWSError>;
   /**
-   * 
+   * Delete a workspace based on a workspaceId
+   */
+  deleteWorkspace(params: CodeWhispererBearerTokenClient.Types.DeleteWorkspaceRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.DeleteWorkspaceResponse) => void): Request<CodeWhispererBearerTokenClient.Types.DeleteWorkspaceResponse, AWSError>;
+  /**
+   * Delete a workspace based on a workspaceId
+   */
+  deleteWorkspace(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.DeleteWorkspaceResponse) => void): Request<CodeWhispererBearerTokenClient.Types.DeleteWorkspaceResponse, AWSError>;
+  /**
+   * Generate completions based on the provided file context in a paginated response.
    */
   generateCompletions(params: CodeWhispererBearerTokenClient.Types.GenerateCompletionsRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GenerateCompletionsResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GenerateCompletionsResponse, AWSError>;
   /**
-   * 
+   * Generate completions based on the provided file context in a paginated response.
    */
   generateCompletions(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GenerateCompletionsResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GenerateCompletionsResponse, AWSError>;
   /**
-   * 
+   * Gets the metadata of a code analysis job.
    */
   getCodeAnalysis(params: CodeWhispererBearerTokenClient.Types.GetCodeAnalysisRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetCodeAnalysisResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetCodeAnalysisResponse, AWSError>;
   /**
-   * 
+   * Gets the metadata of a code analysis job.
    */
   getCodeAnalysis(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetCodeAnalysisResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetCodeAnalysisResponse, AWSError>;
   /**
-   * 
+   *
+   */
+  getCodeFixJob(params: CodeWhispererBearerTokenClient.Types.GetCodeFixJobRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetCodeFixJobResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetCodeFixJobResponse, AWSError>;
+  /**
+   *
+   */
+  getCodeFixJob(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetCodeFixJobResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetCodeFixJobResponse, AWSError>;
+  /**
+   * API to get status of task assist code generation.
    */
   getTaskAssistCodeGeneration(params: CodeWhispererBearerTokenClient.Types.GetTaskAssistCodeGenerationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetTaskAssistCodeGenerationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetTaskAssistCodeGenerationResponse, AWSError>;
   /**
-   * 
+   * API to get status of task assist code generation.
    */
   getTaskAssistCodeGeneration(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetTaskAssistCodeGenerationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetTaskAssistCodeGenerationResponse, AWSError>;
   /**
-   * 
+   * API to get test generation job.
+   */
+  getTestGeneration(params: CodeWhispererBearerTokenClient.Types.GetTestGenerationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetTestGenerationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetTestGenerationResponse, AWSError>;
+  /**
+   * API to get test generation job.
+   */
+  getTestGeneration(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetTestGenerationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetTestGenerationResponse, AWSError>;
+  /**
+   * API to get code transformation status.
    */
   getTransformation(params: CodeWhispererBearerTokenClient.Types.GetTransformationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetTransformationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetTransformationResponse, AWSError>;
   /**
-   * 
+   * API to get code transformation status.
    */
   getTransformation(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetTransformationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetTransformationResponse, AWSError>;
   /**
-   * 
+   * API to get code transformation status.
    */
   getTransformationPlan(params: CodeWhispererBearerTokenClient.Types.GetTransformationPlanRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetTransformationPlanResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetTransformationPlanResponse, AWSError>;
   /**
-   * 
+   * API to get code transformation status.
    */
   getTransformationPlan(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.GetTransformationPlanResponse) => void): Request<CodeWhispererBearerTokenClient.Types.GetTransformationPlanResponse, AWSError>;
   /**
-   * 
+   *
    */
   listAvailableCustomizations(params: CodeWhispererBearerTokenClient.Types.ListAvailableCustomizationsRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListAvailableCustomizationsResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListAvailableCustomizationsResponse, AWSError>;
   /**
-   * 
+   *
    */
   listAvailableCustomizations(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListAvailableCustomizationsResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListAvailableCustomizationsResponse, AWSError>;
   /**
-   * 
+   *
+   */
+  listAvailableProfiles(params: CodeWhispererBearerTokenClient.Types.ListAvailableProfilesRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListAvailableProfilesResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListAvailableProfilesResponse, AWSError>;
+  /**
+   *
+   */
+  listAvailableProfiles(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListAvailableProfilesResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListAvailableProfilesResponse, AWSError>;
+  /**
+   * Lists the findings from a particular code analysis job.
    */
   listCodeAnalysisFindings(params: CodeWhispererBearerTokenClient.Types.ListCodeAnalysisFindingsRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListCodeAnalysisFindingsResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListCodeAnalysisFindingsResponse, AWSError>;
   /**
-   * 
+   * Lists the findings from a particular code analysis job.
    */
   listCodeAnalysisFindings(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListCodeAnalysisFindingsResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListCodeAnalysisFindingsResponse, AWSError>;
   /**
-   * 
+   * Return configruations for each feature that has been setup for A/B testing.
    */
   listFeatureEvaluations(params: CodeWhispererBearerTokenClient.Types.ListFeatureEvaluationsRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListFeatureEvaluationsResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListFeatureEvaluationsResponse, AWSError>;
   /**
-   * 
+   * Return configruations for each feature that has been setup for A/B testing.
    */
   listFeatureEvaluations(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListFeatureEvaluationsResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListFeatureEvaluationsResponse, AWSError>;
   /**
-   * 
+   * List workspace metadata based on a workspace root
+   */
+  listWorkspaceMetadata(params: CodeWhispererBearerTokenClient.Types.ListWorkspaceMetadataRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListWorkspaceMetadataResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListWorkspaceMetadataResponse, AWSError>;
+  /**
+   * List workspace metadata based on a workspace root
+   */
+  listWorkspaceMetadata(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ListWorkspaceMetadataResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ListWorkspaceMetadataResponse, AWSError>;
+  /**
+   * API to resume transformation job.
+   */
+  resumeTransformation(params: CodeWhispererBearerTokenClient.Types.ResumeTransformationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ResumeTransformationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ResumeTransformationResponse, AWSError>;
+  /**
+   * API to resume transformation job.
+   */
+  resumeTransformation(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.ResumeTransformationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.ResumeTransformationResponse, AWSError>;
+  /**
+   * API to record telemetry events.
    */
   sendTelemetryEvent(params: CodeWhispererBearerTokenClient.Types.SendTelemetryEventRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.SendTelemetryEventResponse) => void): Request<CodeWhispererBearerTokenClient.Types.SendTelemetryEventResponse, AWSError>;
   /**
-   * 
+   * API to record telemetry events.
    */
   sendTelemetryEvent(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.SendTelemetryEventResponse) => void): Request<CodeWhispererBearerTokenClient.Types.SendTelemetryEventResponse, AWSError>;
   /**
-   * 
+   * Starts a code analysis job
    */
   startCodeAnalysis(params: CodeWhispererBearerTokenClient.Types.StartCodeAnalysisRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartCodeAnalysisResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartCodeAnalysisResponse, AWSError>;
   /**
-   * 
+   * Starts a code analysis job
    */
   startCodeAnalysis(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartCodeAnalysisResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartCodeAnalysisResponse, AWSError>;
   /**
-   * 
+   *
+   */
+  startCodeFixJob(params: CodeWhispererBearerTokenClient.Types.StartCodeFixJobRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartCodeFixJobResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartCodeFixJobResponse, AWSError>;
+  /**
+   *
+   */
+  startCodeFixJob(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartCodeFixJobResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartCodeFixJobResponse, AWSError>;
+  /**
+   * API to start task assist code generation.
    */
   startTaskAssistCodeGeneration(params: CodeWhispererBearerTokenClient.Types.StartTaskAssistCodeGenerationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartTaskAssistCodeGenerationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartTaskAssistCodeGenerationResponse, AWSError>;
   /**
-   * 
+   * API to start task assist code generation.
    */
   startTaskAssistCodeGeneration(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartTaskAssistCodeGenerationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartTaskAssistCodeGenerationResponse, AWSError>;
   /**
-   * 
+   * API to start test generation.
+   */
+  startTestGeneration(params: CodeWhispererBearerTokenClient.Types.StartTestGenerationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartTestGenerationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartTestGenerationResponse, AWSError>;
+  /**
+   * API to start test generation.
+   */
+  startTestGeneration(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartTestGenerationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartTestGenerationResponse, AWSError>;
+  /**
+   * API to start code translation.
    */
   startTransformation(params: CodeWhispererBearerTokenClient.Types.StartTransformationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartTransformationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartTransformationResponse, AWSError>;
   /**
-   * 
+   * API to start code translation.
    */
   startTransformation(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StartTransformationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StartTransformationResponse, AWSError>;
   /**
-   * 
+   * API to stop code transformation status.
    */
   stopTransformation(params: CodeWhispererBearerTokenClient.Types.StopTransformationRequest, callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StopTransformationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StopTransformationResponse, AWSError>;
   /**
-   * 
+   * API to stop code transformation status.
    */
   stopTransformation(callback?: (err: AWSError, data: CodeWhispererBearerTokenClient.Types.StopTransformationResponse) => void): Request<CodeWhispererBearerTokenClient.Types.StopTransformationResponse, AWSError>;
 }
 declare namespace CodeWhispererBearerTokenClient {
-  export type ArtifactMap = {[key: string]: UploadId};
-  export type ArtifactType = "SourceCode"|"BuiltJars"|string;
+  export type ActiveFunctionalityList = FunctionalityName[];
+  export interface AdditionalContentEntry {
+    /**
+     * The name/identifier for this context entry
+     */
+    name: AdditionalContentEntryNameString;
+    /**
+     * A description of what this context entry represents
+     */
+    description: AdditionalContentEntryDescriptionString;
+    /**
+     * The actual contextual content
+     */
+    innerContext?: AdditionalContentEntryInnerContextString;
+  }
+  export type AdditionalContentEntryDescriptionString = string;
+  export type AdditionalContentEntryInnerContextString = string;
+  export type AdditionalContentEntryNameString = string;
+  export type AdditionalContentList = AdditionalContentEntry[];
+  export type AgenticChatEventStatus = "SUCCEEDED" | "CANCELLED" | "FAILED" | string;
+  export interface AppStudioState {
+    /**
+     * The namespace of the context. Examples: 'ui.Button', 'ui.Table.DataSource', 'ui.Table.RowActions.Button', 'logic.invokeAWS', 'logic.JavaScript'
+     */
+    namespace: AppStudioStateNamespaceString;
+    /**
+     * The name of the property. Examples: 'visibility', 'disability', 'value', 'code'
+     */
+    propertyName: AppStudioStatePropertyNameString;
+    /**
+     * The value of the property.
+     */
+    propertyValue?: AppStudioStatePropertyValueString;
+    /**
+     * Context about how the property is used
+     */
+    propertyContext: AppStudioStatePropertyContextString;
+  }
+  export type AppStudioStateNamespaceString = string;
+  export type AppStudioStatePropertyContextString = string;
+  export type AppStudioStatePropertyNameString = string;
+  export type AppStudioStatePropertyValueString = string;
+  export interface ApplicationProperties {
+    tenantId: TenantId;
+    applicationArn: ResourceArn;
+    tenantUrl: Url;
+    applicationType: FunctionalityName;
+  }
+  export type ApplicationPropertiesList = ApplicationProperties[];
+  export type ArtifactId = string;
+  export type ArtifactMap = { [key: string]: UploadId };
+  export type ArtifactType = "SourceCode" | "BuiltJars" | string;
   export interface AssistantResponseMessage {
     messageId?: MessageId;
+    /**
+     * The content of the text message in markdown format.
+     */
     content: AssistantResponseMessageContentString;
+    /**
+     * Web References
+     */
     supplementaryWebLinks?: SupplementaryWebLinks;
+    /**
+     * Code References
+     */
     references?: References;
+    /**
+     * Followup Prompt
+     */
     followupPrompt?: FollowupPrompt;
+    /**
+     * ToolUse Request
+     */
+    toolUses?: ToolUses;
   }
   export type AssistantResponseMessageContentString = string;
   export type Base64EncodedPaginationToken = string;
   export type Boolean = boolean;
+  export interface ByUserAnalytics {
+    s3Uri?: S3Uri;
+    toggle: OptInFeatureToggle;
+  }
   export interface ChatAddMessageEvent {
     conversationId: ConversationId;
     messageId: MessageId;
+    customizationArn?: CustomizationArn;
     userIntent?: UserIntent;
     hasCodeSnippet?: Boolean;
     programmingLanguage?: ProgrammingLanguage;
     activeEditorTotalCharacters?: Integer;
     timeToFirstChunkMilliseconds?: Double;
-    timeBetweenChunks?: TimeBetweenChunks;
+    timeBetweenChunks?: timeBetweenChunks;
     fullResponselatency?: Double;
     requestLength?: Integer;
     responseLength?: Integer;
+    numberOfCodeBlocks?: Integer;
+    hasProjectLevelContext?: Boolean;
+    result?: AgenticChatEventStatus;
   }
   export type ChatHistory = ChatMessage[];
   export interface ChatInteractWithMessageEvent {
     conversationId: ConversationId;
     messageId: MessageId;
+    customizationArn?: CustomizationArn;
     interactionType?: ChatMessageInteractionType;
-    interactionTarget?: String;
+    interactionTarget?: ChatInteractWithMessageEventInteractionTargetString;
     acceptedCharacterCount?: Integer;
+    acceptedLineCount?: Integer;
     acceptedSnippetHasReference?: Boolean;
+    hasProjectLevelContext?: Boolean;
+    userIntent?: UserIntent;
   }
+  export type ChatInteractWithMessageEventInteractionTargetString = string;
   export interface ChatMessage {
     userInputMessage?: UserInputMessage;
     assistantResponseMessage?: AssistantResponseMessage;
   }
-  export type ChatMessageInteractionType = "INSERT_AT_CURSOR"|"COPY_SNIPPET"|"COPY"|"CLICK_LINK"|"CLICK_BODY_LINK"|"CLICK_FOLLOW_UP"|"HOVER_REFERENCE"|"UPVOTE"|"DOWNVOTE"|string;
+  export type ChatMessageInteractionType = "INSERT_AT_CURSOR" | "COPY_SNIPPET" | "COPY" | "CLICK_LINK" | "CLICK_BODY_LINK" | "CLICK_FOLLOW_UP" | "HOVER_REFERENCE" | "UPVOTE" | "DOWNVOTE" | string;
+  export type ChatTriggerType = "MANUAL" | "DIAGNOSTIC" | "INLINE_CHAT" | string;
   export interface ChatUserModificationEvent {
     conversationId: ConversationId;
+    customizationArn?: CustomizationArn;
     messageId: MessageId;
     programmingLanguage?: ProgrammingLanguage;
     modificationPercentage: Double;
+    hasProjectLevelContext?: Boolean;
   }
-  export type ChatTriggerType = "MANUAL"|"DIAGNOSTIC"|string;
-  export type CodeAnalysisFindingsSchema = "codeanalysis/findings/1.0"|string;
-  export type CodeAnalysisStatus = "Completed"|"Pending"|"Failed"|string;
+  export type CodeAnalysisFindingsSchema = "codeanalysis/findings/1.0" | string;
+  export type CodeAnalysisScope = "FILE" | "PROJECT" | string;
+  export type CodeAnalysisStatus = "Completed" | "Pending" | "Failed" | string;
+  export interface CodeAnalysisUploadContext {
+    codeScanName: CodeScanName;
+  }
   export interface CodeCoverageEvent {
     customizationArn?: CustomizationArn;
     programmingLanguage: ProgrammingLanguage;
@@ -210,38 +367,122 @@ declare namespace CodeWhispererBearerTokenClient {
     totalCharacterCount: PrimitiveInteger;
     timestamp: Timestamp;
     unmodifiedAcceptedCharacterCount?: PrimitiveInteger;
+    totalNewCodeCharacterCount?: PrimitiveInteger;
+    totalNewCodeLineCount?: PrimitiveInteger;
+    userWrittenCodeCharacterCount?: CodeCoverageEventUserWrittenCodeCharacterCountInteger;
+    userWrittenCodeLineCount?: CodeCoverageEventUserWrittenCodeLineCountInteger;
+  }
+  export type CodeCoverageEventUserWrittenCodeCharacterCountInteger = number;
+  export type CodeCoverageEventUserWrittenCodeLineCountInteger = number;
+  export interface CodeFixAcceptanceEvent {
+    jobId: String;
+    ruleId?: String;
+    detectorId?: String;
+    findingId?: String;
+    programmingLanguage?: ProgrammingLanguage;
+    linesOfCodeAccepted?: Integer;
+    charsOfCodeAccepted?: Integer;
+  }
+  export interface CodeFixGenerationEvent {
+    jobId: String;
+    ruleId?: String;
+    detectorId?: String;
+    findingId?: String;
+    programmingLanguage?: ProgrammingLanguage;
+    linesOfCodeGenerated?: Integer;
+    charsOfCodeGenerated?: Integer;
+  }
+  export type CodeFixJobStatus = "Succeeded" | "InProgress" | "Failed" | string;
+  export type CodeFixName = string;
+  export interface CodeFixUploadContext {
+    codeFixName: CodeFixName;
   }
   export type CodeGenerationId = string;
   export interface CodeGenerationStatus {
     status: CodeGenerationWorkflowStatus;
     currentStage: CodeGenerationWorkflowStage;
   }
-  export type CodeGenerationWorkflowStage = "InitialCodeGeneration"|"CodeRefinement"|string;
-  export type CodeGenerationWorkflowStatus = "InProgress"|"Complete"|"Failed"|string;
+  export type CodeGenerationStatusDetail = string;
+  export type CodeGenerationWorkflowStage = "InitialCodeGeneration" | "CodeRefinement" | string;
+  export type CodeGenerationWorkflowStatus = "InProgress" | "Complete" | "Failed" | string;
   export interface CodeScanEvent {
     programmingLanguage: ProgrammingLanguage;
     codeScanJobId: CodeScanJobId;
     timestamp: Timestamp;
+    codeAnalysisScope?: CodeAnalysisScope;
+  }
+  export interface CodeScanFailedEvent {
+    programmingLanguage: ProgrammingLanguage;
+    codeScanJobId: CodeScanJobId;
+    timestamp: Timestamp;
+    codeAnalysisScope?: CodeAnalysisScope;
   }
   export type CodeScanJobId = string;
+  export type CodeScanName = string;
+  export interface CodeScanRemediationsEvent {
+    programmingLanguage?: ProgrammingLanguage;
+    CodeScanRemediationsEventType?: CodeScanRemediationsEventType;
+    timestamp?: Timestamp;
+    detectorId?: String;
+    findingId?: String;
+    ruleId?: String;
+    component?: String;
+    reason?: String;
+    result?: String;
+    includesFix?: Boolean;
+  }
+  export type CodeScanRemediationsEventType = "CODESCAN_ISSUE_HOVER" | "CODESCAN_ISSUE_APPLY_FIX" | "CODESCAN_ISSUE_VIEW_DETAILS" | string;
+  export interface CodeScanSucceededEvent {
+    programmingLanguage: ProgrammingLanguage;
+    codeScanJobId: CodeScanJobId;
+    timestamp: Timestamp;
+    numberOfFindings: PrimitiveInteger;
+    codeAnalysisScope?: CodeAnalysisScope;
+  }
   export interface Completion {
     content: CompletionContentString;
     references?: References;
     mostRelevantMissingImports?: Imports;
   }
   export type CompletionContentString = string;
-  export type CompletionType = "BLOCK"|"LINE"|string;
+  export type CompletionType = "BLOCK" | "LINE" | string;
   export type Completions = Completion[];
-  export type ContentChecksumType = "SHA_256"|string;
-  export type ContextTruncationScheme = "ANALYSIS"|"GUMBY"|string;
+  export interface ConsoleState {
+    region?: String;
+    consoleUrl?: SensitiveString;
+    serviceId?: String;
+    serviceConsolePage?: String;
+    serviceSubconsolePage?: String;
+    taskName?: SensitiveString;
+  }
+  export type ContentChecksumType = "SHA_256" | string;
+  export type ContextTruncationScheme = "ANALYSIS" | "GUMBY" | string;
   export type ConversationId = string;
   export interface ConversationState {
+    /**
+     * Unique identifier for the chat conversation stream
+     */
     conversationId?: ConversationId;
+    /**
+     * Unique identifier for remote workspace
+     */
+    workspaceId?: UUID;
+    /**
+     * Holds the history of chat messages.
+     */
     history?: ChatHistory;
+    /**
+     * Holds the current message being processed or displayed.
+     */
     currentMessage: ChatMessage;
+    /**
+     * Trigger Reason for Chat
+     */
     chatTriggerType: ChatTriggerType;
+    customizationArn?: ResourceArn;
   }
   export interface CreateTaskAssistConversationRequest {
+    profileArn?: ProfileArn;
   }
   export interface CreateTaskAssistConversationResponse {
     conversationId: ConversationId;
@@ -254,6 +495,8 @@ declare namespace CodeWhispererBearerTokenClient {
     artifactType?: ArtifactType;
     uploadIntent?: UploadIntent;
     uploadContext?: UploadContext;
+    uploadId?: UploadId;
+    profileArn?: ProfileArn;
   }
   export type CreateUploadUrlRequestContentChecksumString = string;
   export type CreateUploadUrlRequestContentLengthLong = number;
@@ -262,9 +505,24 @@ declare namespace CodeWhispererBearerTokenClient {
     uploadId: UploadId;
     uploadUrl: PreSignedUrl;
     kmsKeyArn?: ResourceArn;
+    requestHeaders?: RequestHeaders;
+  }
+  export interface CreateWorkspaceRequest {
+    workspaceRoot: CreateWorkspaceRequestWorkspaceRootString;
+    profileArn?: ProfileArn;
+  }
+  export type CreateWorkspaceRequestWorkspaceRootString = string;
+  export interface CreateWorkspaceResponse {
+    workspace: WorkspaceMetadata;
   }
   export interface CursorState {
+    /**
+     * Represents a cursor position in a Text Document
+     */
     position?: Position;
+    /**
+     * Represents a text selection in a Text Document
+     */
     range?: Range;
   }
   export interface Customization {
@@ -275,18 +533,34 @@ declare namespace CodeWhispererBearerTokenClient {
   export type CustomizationArn = string;
   export type CustomizationName = string;
   export type Customizations = Customization[];
+  export interface DashboardAnalytics {
+    toggle: OptInFeatureToggle;
+  }
   export interface DeleteTaskAssistConversationRequest {
     conversationId: ConversationId;
+    profileArn?: ProfileArn;
   }
   export interface DeleteTaskAssistConversationResponse {
     conversationId: ConversationId;
   }
+  export interface DeleteWorkspaceRequest {
+    workspaceId: UUID;
+    profileArn?: ProfileArn;
+  }
+  export interface DeleteWorkspaceResponse {
+  }
   export type Description = string;
   export interface Diagnostic {
+    /**
+     * Diagnostics originating from a TextDocument
+     */
     textDocumentDiagnostic?: TextDocumentDiagnostic;
+    /**
+     * Diagnostics originating from a Runtime
+     */
     runtimeDiagnostic?: RuntimeDiagnostic;
   }
-  export type DiagnosticSeverity = "ERROR"|"WARNING"|"INFORMATION"|"HINT"|string;
+  export type DiagnosticSeverity = "ERROR" | "WARNING" | "INFORMATION" | "HINT" | string;
   export interface Dimension {
     name?: DimensionNameString;
     value?: DimensionValueString;
@@ -294,18 +568,142 @@ declare namespace CodeWhispererBearerTokenClient {
   export type DimensionList = Dimension[];
   export type DimensionNameString = string;
   export type DimensionValueString = string;
+  export type DocFolderLevel = "SUB_FOLDER" | "ENTIRE_WORKSPACE" | string;
+  export interface DocGenerationEvent {
+    conversationId: ConversationId;
+    numberOfAddChars?: PrimitiveInteger;
+    numberOfAddLines?: PrimitiveInteger;
+    numberOfAddFiles?: PrimitiveInteger;
+    userDecision?: DocUserDecision;
+    interactionType?: DocInteractionType;
+    userIdentity?: String;
+    numberOfNavigation?: PrimitiveInteger;
+    folderLevel?: DocFolderLevel;
+  }
+  export type DocInteractionType = "GENERATE_README" | "UPDATE_README" | "EDIT_README" | string;
+  export type DocUserDecision = "ACCEPT" | "REJECT" | string;
+  export interface DocV2AcceptanceEvent {
+    conversationId: ConversationId;
+    numberOfAddedChars: DocV2AcceptanceEventNumberOfAddedCharsInteger;
+    numberOfAddedLines: DocV2AcceptanceEventNumberOfAddedLinesInteger;
+    numberOfAddedFiles: DocV2AcceptanceEventNumberOfAddedFilesInteger;
+    userDecision: DocUserDecision;
+    interactionType: DocInteractionType;
+    numberOfNavigations: DocV2AcceptanceEventNumberOfNavigationsInteger;
+    folderLevel: DocFolderLevel;
+  }
+  export type DocV2AcceptanceEventNumberOfAddedCharsInteger = number;
+  export type DocV2AcceptanceEventNumberOfAddedFilesInteger = number;
+  export type DocV2AcceptanceEventNumberOfAddedLinesInteger = number;
+  export type DocV2AcceptanceEventNumberOfNavigationsInteger = number;
+  export interface DocV2GenerationEvent {
+    conversationId: ConversationId;
+    numberOfGeneratedChars: DocV2GenerationEventNumberOfGeneratedCharsInteger;
+    numberOfGeneratedLines: DocV2GenerationEventNumberOfGeneratedLinesInteger;
+    numberOfGeneratedFiles: DocV2GenerationEventNumberOfGeneratedFilesInteger;
+    interactionType?: DocInteractionType;
+    numberOfNavigations?: DocV2GenerationEventNumberOfNavigationsInteger;
+    folderLevel?: DocFolderLevel;
+  }
+  export type DocV2GenerationEventNumberOfGeneratedCharsInteger = number;
+  export type DocV2GenerationEventNumberOfGeneratedFilesInteger = number;
+  export type DocV2GenerationEventNumberOfGeneratedLinesInteger = number;
+  export type DocV2GenerationEventNumberOfNavigationsInteger = number;
   export interface DocumentSymbol {
+    /**
+     * Name of the Document Symbol
+     */
     name: DocumentSymbolNameString;
+    /**
+     * Symbol type - DECLARATION / USAGE
+     */
     type: SymbolType;
+    /**
+     * Symbol package / source for FullyQualified names
+     */
     source?: DocumentSymbolSourceString;
   }
   export type DocumentSymbolNameString = string;
   export type DocumentSymbolSourceString = string;
   export type DocumentSymbols = DocumentSymbol[];
+  export interface DocumentationIntentContext {
+    scope?: DocumentationIntentContextScopeString;
+    type: DocumentationType;
+  }
+  export type DocumentationIntentContextScopeString = string;
+  export type DocumentationType = "README" | string;
   export type Double = number;
   export interface EditorState {
+    /**
+     * Represents currently edited file
+     */
     document?: TextDocument;
+    /**
+     * Position of the cursor
+     */
     cursorState?: CursorState;
+    /**
+     * Represents IDE provided relevant files
+     */
+    relevantDocuments?: RelevantDocumentList;
+    /**
+     * Whether service should use relevant document in prompt
+     */
+    useRelevantDocuments?: Boolean;
+  }
+  export interface EnvState {
+    /**
+     * The name of the operating system in use
+     */
+    operatingSystem?: EnvStateOperatingSystemString;
+    /**
+     * The current working directory of the environment
+     */
+    currentWorkingDirectory?: EnvStateCurrentWorkingDirectoryString;
+    /**
+     * The environment variables set in the current environment
+     */
+    environmentVariables?: EnvironmentVariables;
+    /**
+     * Local timezone offset of the client. For more information, see documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
+     */
+    timezoneOffset?: EnvStateTimezoneOffsetInteger;
+  }
+  export type EnvStateCurrentWorkingDirectoryString = string;
+  export type EnvStateOperatingSystemString = string;
+  export type EnvStateTimezoneOffsetInteger = number;
+  export interface EnvironmentVariable {
+    /**
+     * The key of an environment variable
+     */
+    key?: EnvironmentVariableKeyString;
+    /**
+     * The value of an environment variable
+     */
+    value?: EnvironmentVariableValueString;
+  }
+  export type EnvironmentVariableKeyString = string;
+  export type EnvironmentVariableValueString = string;
+  export type EnvironmentVariables = EnvironmentVariable[];
+  export type ErrorDetails = string;
+  export interface FeatureDevCodeAcceptanceEvent {
+    conversationId: ConversationId;
+    linesOfCodeAccepted: FeatureDevCodeAcceptanceEventLinesOfCodeAcceptedInteger;
+    charactersOfCodeAccepted: FeatureDevCodeAcceptanceEventCharactersOfCodeAcceptedInteger;
+    programmingLanguage?: ProgrammingLanguage;
+  }
+  export type FeatureDevCodeAcceptanceEventCharactersOfCodeAcceptedInteger = number;
+  export type FeatureDevCodeAcceptanceEventLinesOfCodeAcceptedInteger = number;
+  export interface FeatureDevCodeGenerationEvent {
+    conversationId: ConversationId;
+    linesOfCodeGenerated: FeatureDevCodeGenerationEventLinesOfCodeGeneratedInteger;
+    charactersOfCodeGenerated: FeatureDevCodeGenerationEventCharactersOfCodeGeneratedInteger;
+    programmingLanguage?: ProgrammingLanguage;
+  }
+  export type FeatureDevCodeGenerationEventCharactersOfCodeGeneratedInteger = number;
+  export type FeatureDevCodeGenerationEventLinesOfCodeGeneratedInteger = number;
+  export interface FeatureDevEvent {
+    conversationId: ConversationId;
   }
   export interface FeatureEvaluation {
     feature: FeatureName;
@@ -326,16 +724,25 @@ declare namespace CodeWhispererBearerTokenClient {
     leftFileContent: FileContextLeftFileContentString;
     rightFileContent: FileContextRightFileContentString;
     filename: FileContextFilenameString;
+    fileUri?: FileContextFileUriString;
     programmingLanguage: ProgrammingLanguage;
   }
+  export type FileContextFileUriString = string;
   export type FileContextFilenameString = string;
   export type FileContextLeftFileContentString = string;
   export type FileContextRightFileContentString = string;
   export interface FollowupPrompt {
+    /**
+     * The content of the text message in markdown format.
+     */
     content: FollowupPromptContentString;
+    /**
+     * User Intent
+     */
     userIntent?: UserIntent;
   }
   export type FollowupPromptContentString = string;
+  export type FunctionalityName = "COMPLETIONS" | "ANALYSIS" | "CONVERSATIONS" | "TASK_ASSIST" | "TRANSFORMATIONS" | "CHAT_CUSTOMIZATION" | "TRANSFORMATIONS_WEBAPP" | string;
   export interface GenerateCompletionsRequest {
     fileContext: FileContext;
     maxResults?: GenerateCompletionsRequestMaxResultsInteger;
@@ -345,6 +752,8 @@ declare namespace CodeWhispererBearerTokenClient {
     customizationArn?: CustomizationArn;
     optOutPreference?: OptOutPreference;
     userContext?: UserContext;
+    profileArn?: ProfileArn;
+    workspaceId?: UUID;
   }
   export type GenerateCompletionsRequestMaxResultsInteger = number;
   export type GenerateCompletionsRequestNextTokenString = string;
@@ -354,53 +763,119 @@ declare namespace CodeWhispererBearerTokenClient {
   }
   export interface GetCodeAnalysisRequest {
     jobId: GetCodeAnalysisRequestJobIdString;
+    profileArn?: ProfileArn;
   }
   export type GetCodeAnalysisRequestJobIdString = string;
   export interface GetCodeAnalysisResponse {
     status: CodeAnalysisStatus;
     errorMessage?: SensitiveString;
   }
+  export interface GetCodeFixJobRequest {
+    jobId: GetCodeFixJobRequestJobIdString;
+    profileArn?: ProfileArn;
+  }
+  export type GetCodeFixJobRequestJobIdString = string;
+  export interface GetCodeFixJobResponse {
+    jobStatus?: CodeFixJobStatus;
+    suggestedFix?: SuggestedFix;
+  }
   export interface GetTaskAssistCodeGenerationRequest {
     conversationId: ConversationId;
     codeGenerationId: CodeGenerationId;
+    profileArn?: ProfileArn;
   }
   export interface GetTaskAssistCodeGenerationResponse {
     conversationId: ConversationId;
     codeGenerationStatus: CodeGenerationStatus;
+    codeGenerationStatusDetail?: CodeGenerationStatusDetail;
+    codeGenerationRemainingIterationCount?: Integer;
+    codeGenerationTotalIterationCount?: Integer;
+  }
+  export interface GetTestGenerationRequest {
+    testGenerationJobGroupName: TestGenerationJobGroupName;
+    testGenerationJobId: UUID;
+    profileArn?: ProfileArn;
+  }
+  export interface GetTestGenerationResponse {
+    testGenerationJob?: TestGenerationJob;
   }
   export interface GetTransformationPlanRequest {
     transformationJobId: TransformationJobId;
+    profileArn?: ProfileArn;
   }
   export interface GetTransformationPlanResponse {
     transformationPlan: TransformationPlan;
   }
   export interface GetTransformationRequest {
     transformationJobId: TransformationJobId;
+    profileArn?: ProfileArn;
   }
   export interface GetTransformationResponse {
     transformationJob: TransformationJob;
   }
-  export type IdeCategory = "JETBRAINS"|"VSCODE"|string;
+  export interface GitState {
+    /**
+     * The output of the command git status --porcelain=v1 -b
+     */
+    status?: GitStateStatusString;
+  }
+  export type GitStateStatusString = string;
+  export type IdeCategory = "JETBRAINS" | "VSCODE" | "CLI" | "JUPYTER_MD" | "JUPYTER_SM" | "ECLIPSE" | "VISUAL_STUDIO" | string;
   export type IdempotencyToken = string;
+  export interface IdentityDetails {
+    ssoIdentityDetails?: SSOIdentityDetails;
+  }
   export interface Import {
     statement?: ImportStatementString;
   }
   export type ImportStatementString = string;
   export type Imports = Import[];
+  export interface InlineChatEvent {
+    requestId: UUID;
+    timestamp: Timestamp;
+    inputLength?: PrimitiveInteger;
+    numSelectedLines?: PrimitiveInteger;
+    numSuggestionAddChars?: PrimitiveInteger;
+    numSuggestionAddLines?: PrimitiveInteger;
+    numSuggestionDelChars?: PrimitiveInteger;
+    numSuggestionDelLines?: PrimitiveInteger;
+    codeIntent?: Boolean;
+    userDecision?: InlineChatUserDecision;
+    responseStartLatency?: Double;
+    responseEndLatency?: Double;
+    programmingLanguage?: ProgrammingLanguage;
+  }
+  export type InlineChatUserDecision = "ACCEPT" | "REJECT" | "DISMISS" | string;
   export type Integer = number;
+  export type Intent = "DEV" | "DOC" | string;
+  export interface IntentContext {
+    documentation?: DocumentationIntentContext;
+  }
+  export type LineRangeList = Range[];
   export interface ListAvailableCustomizationsRequest {
     maxResults?: ListAvailableCustomizationsRequestMaxResultsInteger;
     nextToken?: Base64EncodedPaginationToken;
+    profileArn?: ProfileArn;
   }
   export type ListAvailableCustomizationsRequestMaxResultsInteger = number;
   export interface ListAvailableCustomizationsResponse {
     customizations: Customizations;
     nextToken?: Base64EncodedPaginationToken;
   }
+  export interface ListAvailableProfilesRequest {
+    maxResults?: ListAvailableProfilesRequestMaxResultsInteger;
+    nextToken?: Base64EncodedPaginationToken;
+  }
+  export type ListAvailableProfilesRequestMaxResultsInteger = number;
+  export interface ListAvailableProfilesResponse {
+    profiles: ProfileList;
+    nextToken?: Base64EncodedPaginationToken;
+  }
   export interface ListCodeAnalysisFindingsRequest {
     jobId: ListCodeAnalysisFindingsRequestJobIdString;
     nextToken?: PaginationToken;
     codeAnalysisFindingsSchema: CodeAnalysisFindingsSchema;
+    profileArn?: ProfileArn;
   }
   export type ListCodeAnalysisFindingsRequestJobIdString = string;
   export interface ListCodeAnalysisFindingsResponse {
@@ -409,9 +884,21 @@ declare namespace CodeWhispererBearerTokenClient {
   }
   export interface ListFeatureEvaluationsRequest {
     userContext: UserContext;
+    profileArn?: ProfileArn;
   }
   export interface ListFeatureEvaluationsResponse {
     featureEvaluations: FeatureEvaluationsList;
+  }
+  export interface ListWorkspaceMetadataRequest {
+    workspaceRoot?: ListWorkspaceMetadataRequestWorkspaceRootString;
+    nextToken?: String;
+    maxResults?: Integer;
+    profileArn?: ProfileArn;
+  }
+  export type ListWorkspaceMetadataRequestWorkspaceRootString = string;
+  export interface ListWorkspaceMetadataResponse {
+    workspaces: WorkspaceList;
+    nextToken?: String;
   }
   export type Long = number;
   export type MessageId = string;
@@ -419,32 +906,110 @@ declare namespace CodeWhispererBearerTokenClient {
     metricName: MetricDataMetricNameString;
     metricValue: Double;
     timestamp: Timestamp;
+    product: MetricDataProductString;
     dimensions?: DimensionList;
   }
   export type MetricDataMetricNameString = string;
-  export type OperatingSystem = "MAC"|"WINDOWS"|"LINUX"|string;
-  export type OptOutPreference = "OPTIN"|"OPTOUT"|string;
+  export type MetricDataProductString = string;
+  export type ModelId = string;
+  export type Notifications = NotificationsFeature[];
+  export interface NotificationsFeature {
+    feature: FeatureName;
+    toggle: OptInFeatureToggle;
+  }
+  export type OperatingSystem = "MAC" | "WINDOWS" | "LINUX" | string;
+  export type OptInFeatureToggle = "ON" | "OFF" | string;
+  export interface OptInFeatures {
+    promptLogging?: PromptLogging;
+    byUserAnalytics?: ByUserAnalytics;
+    dashboardAnalytics?: DashboardAnalytics;
+    notifications?: Notifications;
+    workspaceContext?: WorkspaceContext;
+  }
+  export type OptOutPreference = "OPTIN" | "OPTOUT" | string;
+  export type Origin = "CHATBOT" | "CONSOLE" | "DOCUMENTATION" | "MARKETING" | "MOBILE" | "SERVICE_INTERNAL" | "UNIFIED_SEARCH" | "UNKNOWN" | "MD" | "IDE" | "SAGE_MAKER" | "CLI" | "AI_EDITOR" | "OPENSEARCH_DASHBOARD" | "GITLAB" | string;
+  export interface PackageInfo {
+    executionCommand?: SensitiveString;
+    buildCommand?: SensitiveString;
+    buildOrder?: PackageInfoBuildOrderInteger;
+    testFramework?: String;
+    packageSummary?: PackageInfoPackageSummaryString;
+    packagePlan?: PackageInfoPackagePlanString;
+    targetFileInfoList?: TargetFileInfoList;
+  }
+  export type PackageInfoBuildOrderInteger = number;
+  export type PackageInfoList = PackageInfo[];
+  export type PackageInfoPackagePlanString = string;
+  export type PackageInfoPackageSummaryString = string;
   export type PaginationToken = string;
   export interface Position {
+    /**
+     * Line position in a document.
+     */
     line: Integer;
+    /**
+     * Character offset on a line in a document (zero-based)
+     */
     character: Integer;
   }
   export type PreSignedUrl = string;
   export type PrimitiveInteger = number;
+  export interface Profile {
+    arn: ProfileArn;
+    identityDetails?: IdentityDetails;
+    profileName: ProfileName;
+    referenceTrackerConfiguration?: ReferenceTrackerConfiguration;
+    kmsKeyArn?: ResourceArn;
+    activeFunctionalities?: ActiveFunctionalityList;
+    status?: ProfileStatus;
+    errorDetails?: ErrorDetails;
+    resourcePolicy?: ResourcePolicy;
+    profileType?: ProfileType;
+    optInFeatures?: OptInFeatures;
+    permissionUpdateRequired?: Boolean;
+    applicationProperties?: ApplicationPropertiesList;
+  }
+  export type ProfileArn = string;
+  export type ProfileList = Profile[];
+  export type ProfileName = string;
+  export type ProfileStatus = "ACTIVE" | "CREATING" | "CREATE_FAILED" | "UPDATING" | "UPDATE_FAILED" | "DELETING" | "DELETE_FAILED" | string;
+  export type ProfileType = "Q_DEVELOPER" | "CODEWHISPERER" | string;
   export interface ProgrammingLanguage {
     languageName: ProgrammingLanguageLanguageNameString;
   }
   export type ProgrammingLanguageLanguageNameString = string;
   export type ProgressUpdates = TransformationProgressUpdate[];
+  export interface PromptLogging {
+    s3Uri: S3Uri;
+    toggle: OptInFeatureToggle;
+  }
   export interface Range {
+    /**
+     * The range's start position.
+     */
     start: Position;
+    /**
+     * The range's end position.
+     */
     end: Position;
   }
-  export type RecommendationsWithReferencesPreference = "BLOCK"|"ALLOW"|string;
+  export type RecommendationsWithReferencesPreference = "BLOCK" | "ALLOW" | string;
   export interface Reference {
+    /**
+     * License name
+     */
     licenseName?: ReferenceLicenseNameString;
+    /**
+     * Code Repsitory for the associated reference
+     */
     repository?: ReferenceRepositoryString;
+    /**
+     * Respository URL
+     */
     url?: ReferenceUrlString;
+    /**
+     * Span / Range for the Reference
+     */
     recommendationContentSpan?: Span;
   }
   export type ReferenceLicenseNameString = string;
@@ -454,23 +1019,117 @@ declare namespace CodeWhispererBearerTokenClient {
   }
   export type ReferenceUrlString = string;
   export type References = Reference[];
+  export type RelevantDocumentList = RelevantTextDocument[];
+  export interface RelevantTextDocument {
+    /**
+     * Filepath relative to the root of the workspace
+     */
+    relativeFilePath: RelevantTextDocumentRelativeFilePathString;
+    /**
+     * The text document's language identifier.
+     */
+    programmingLanguage?: ProgrammingLanguage;
+    /**
+     * Content of the text document
+     */
+    text?: RelevantTextDocumentTextString;
+    /**
+     * DocumentSymbols parsed from a text document
+     */
+    documentSymbols?: DocumentSymbols;
+  }
+  export type RelevantTextDocumentRelativeFilePathString = string;
+  export type RelevantTextDocumentTextString = string;
+  export type RequestHeaderKey = string;
+  export type RequestHeaderValue = string;
+  export type RequestHeaders = { [key: string]: RequestHeaderValue };
   export type ResourceArn = string;
+  export interface ResourcePolicy {
+    effect: ResourcePolicyEffect;
+  }
+  export type ResourcePolicyEffect = "ALLOW" | "DENY" | string;
+  export interface ResumeTransformationRequest {
+    transformationJobId: TransformationJobId;
+    userActionStatus?: TransformationUserActionStatus;
+    profileArn?: ProfileArn;
+  }
+  export interface ResumeTransformationResponse {
+    transformationStatus: TransformationStatus;
+  }
   export interface RuntimeDiagnostic {
+    /**
+     * A human-readable string describing the source of the diagnostic
+     */
     source: RuntimeDiagnosticSourceString;
+    /**
+     * Diagnostic Error type
+     */
     severity: DiagnosticSeverity;
+    /**
+     * The diagnostic's message.
+     */
     message: RuntimeDiagnosticMessageString;
   }
   export type RuntimeDiagnosticMessageString = string;
   export type RuntimeDiagnosticSourceString = string;
+  export type S3Uri = string;
+  export interface SSOIdentityDetails {
+    instanceArn: ResourceArn;
+    oidcClientId: String;
+    ssoRegion?: SSORegion;
+  }
+  export type SSORegion = string;
   export interface SendTelemetryEventRequest {
     clientToken?: IdempotencyToken;
     telemetryEvent: TelemetryEvent;
     optOutPreference?: OptOutPreference;
     userContext?: UserContext;
+    profileArn?: ProfileArn;
+    modelId?: ModelId;
   }
   export interface SendTelemetryEventResponse {
   }
+  export interface SensitiveDocument {
+  }
   export type SensitiveString = string;
+  export type ShellHistory = ShellHistoryEntry[];
+  export interface ShellHistoryEntry {
+    /**
+     * The shell command that was run
+     */
+    command: ShellHistoryEntryCommandString;
+    /**
+     * The directory the command was ran in
+     */
+    directory?: ShellHistoryEntryDirectoryString;
+    /**
+     * The exit code of the command after it finished
+     */
+    exitCode?: Integer;
+    /**
+     * The stdout from the command
+     */
+    stdout?: ShellHistoryEntryStdoutString;
+    /**
+     * The stderr from the command
+     */
+    stderr?: ShellHistoryEntryStderrString;
+  }
+  export type ShellHistoryEntryCommandString = string;
+  export type ShellHistoryEntryDirectoryString = string;
+  export type ShellHistoryEntryStderrString = string;
+  export type ShellHistoryEntryStdoutString = string;
+  export interface ShellState {
+    /**
+     * The name of the current shell
+     */
+    shellName: ShellStateShellNameString;
+    /**
+     * The history previous shell commands for the current shell
+     */
+    shellHistory?: ShellHistory;
+  }
+  export type ShellStateShellNameString = string;
   export interface Span {
     start?: SpanStartInteger;
     end?: SpanEndInteger;
@@ -481,6 +1140,9 @@ declare namespace CodeWhispererBearerTokenClient {
     artifacts: ArtifactMap;
     programmingLanguage: ProgrammingLanguage;
     clientToken?: StartCodeAnalysisRequestClientTokenString;
+    scope?: CodeAnalysisScope;
+    codeScanName?: CodeScanName;
+    profileArn?: ProfileArn;
   }
   export type StartCodeAnalysisRequestClientTokenString = string;
   export interface StartCodeAnalysisResponse {
@@ -489,17 +1151,56 @@ declare namespace CodeWhispererBearerTokenClient {
     errorMessage?: SensitiveString;
   }
   export type StartCodeAnalysisResponseJobIdString = string;
+  export interface StartCodeFixJobRequest {
+    snippetRange: Range;
+    uploadId: UploadId;
+    description?: StartCodeFixJobRequestDescriptionString;
+    ruleId?: StartCodeFixJobRequestRuleIdString;
+    codeFixName?: CodeFixName;
+    referenceTrackerConfiguration?: ReferenceTrackerConfiguration;
+    profileArn?: ProfileArn;
+  }
+  export type StartCodeFixJobRequestDescriptionString = string;
+  export type StartCodeFixJobRequestRuleIdString = string;
+  export interface StartCodeFixJobResponse {
+    jobId?: StartCodeFixJobResponseJobIdString;
+    status?: CodeFixJobStatus;
+  }
+  export type StartCodeFixJobResponseJobIdString = string;
   export interface StartTaskAssistCodeGenerationRequest {
     conversationState: ConversationState;
     workspaceState: WorkspaceState;
+    taskAssistPlan?: TaskAssistPlan;
+    codeGenerationId?: CodeGenerationId;
+    currentCodeGenerationId?: CodeGenerationId;
+    intent?: Intent;
+    intentContext?: IntentContext;
+    profileArn?: ProfileArn;
   }
   export interface StartTaskAssistCodeGenerationResponse {
     conversationId: ConversationId;
     codeGenerationId: CodeGenerationId;
   }
+  export interface StartTestGenerationRequest {
+    uploadId: UploadId;
+    targetCodeList: TargetCodeList;
+    /**
+     * The content of user input.
+     */
+    userInput: StartTestGenerationRequestUserInputString;
+    testGenerationJobGroupName?: TestGenerationJobGroupName;
+    clientToken?: StartTestGenerationRequestClientTokenString;
+    profileArn?: ProfileArn;
+  }
+  export type StartTestGenerationRequestClientTokenString = string;
+  export type StartTestGenerationRequestUserInputString = string;
+  export interface StartTestGenerationResponse {
+    testGenerationJob?: TestGenerationJob;
+  }
   export interface StartTransformationRequest {
     workspaceState: WorkspaceState;
     transformationSpec: TransformationSpec;
+    profileArn?: ProfileArn;
   }
   export interface StartTransformationResponse {
     transformationJobId: TransformationJobId;
@@ -507,12 +1208,20 @@ declare namespace CodeWhispererBearerTokenClient {
   export type StepId = string;
   export interface StopTransformationRequest {
     transformationJobId: TransformationJobId;
+    profileArn?: ProfileArn;
   }
   export interface StopTransformationResponse {
     transformationStatus: TransformationStatus;
   }
   export type String = string;
-  export type SuggestionState = "ACCEPT"|"REJECT"|"DISCARD"|"EMPTY"|string;
+  export interface SuggestedFix {
+    codeDiff?: SuggestedFixCodeDiffString;
+    description?: SuggestedFixDescriptionString;
+    references?: References;
+  }
+  export type SuggestedFixCodeDiffString = string;
+  export type SuggestedFixDescriptionString = string;
+  export type SuggestionState = "ACCEPT" | "REJECT" | "DISCARD" | "EMPTY" | "MERGE" | string;
   export interface SupplementalContext {
     filePath: SupplementalContextFilePathString;
     content: SupplementalContextContentString;
@@ -521,15 +1230,75 @@ declare namespace CodeWhispererBearerTokenClient {
   export type SupplementalContextFilePathString = string;
   export type SupplementalContextList = SupplementalContext[];
   export interface SupplementaryWebLink {
+    /**
+     * URL of the web reference link.
+     */
     url: SupplementaryWebLinkUrlString;
+    /**
+     * Title of the web reference link.
+     */
     title: SupplementaryWebLinkTitleString;
+    /**
+     * Relevant text snippet from the link.
+     */
     snippet?: SupplementaryWebLinkSnippetString;
   }
   export type SupplementaryWebLinkSnippetString = string;
   export type SupplementaryWebLinkTitleString = string;
   export type SupplementaryWebLinkUrlString = string;
   export type SupplementaryWebLinks = SupplementaryWebLink[];
-  export type SymbolType = "DECLARATION"|"USAGE"|string;
+  export type SymbolType = "DECLARATION" | "USAGE" | string;
+  export interface TargetCode {
+    /**
+     * The file path relative to the root of the workspace, could be a single file or a folder.
+     */
+    relativeTargetPath: TargetCodeRelativeTargetPathString;
+    targetLineRangeList?: LineRangeList;
+  }
+  export type TargetCodeList = TargetCode[];
+  export type TargetCodeRelativeTargetPathString = string;
+  export interface TargetFileInfo {
+    filePath?: SensitiveString;
+    testFilePath?: SensitiveString;
+    testCoverage?: TargetFileInfoTestCoverageInteger;
+    fileSummary?: TargetFileInfoFileSummaryString;
+    filePlan?: TargetFileInfoFilePlanString;
+    codeReferences?: References;
+    numberOfTestMethods?: TargetFileInfoNumberOfTestMethodsInteger;
+  }
+  export type TargetFileInfoFilePlanString = string;
+  export type TargetFileInfoFileSummaryString = string;
+  export type TargetFileInfoList = TargetFileInfo[];
+  export type TargetFileInfoNumberOfTestMethodsInteger = number;
+  export type TargetFileInfoTestCoverageInteger = number;
+  export type TaskAssistPlan = TaskAssistPlanStep[];
+  export interface TaskAssistPlanStep {
+    /**
+     * File path on which the step is working on.
+     */
+    filePath: TaskAssistPlanStepFilePathString;
+    /**
+     * Description on the step.
+     */
+    description: TaskAssistPlanStepDescriptionString;
+    /**
+     * Start line number of the related changes.
+     */
+    startLine?: TaskAssistPlanStepStartLineInteger;
+    /**
+     * End line number of the related changes.
+     */
+    endLine?: TaskAssistPlanStepEndLineInteger;
+    /**
+     * Type of the action.
+     */
+    action?: TaskAssistPlanStepAction;
+  }
+  export type TaskAssistPlanStepAction = "MODIFY" | "CREATE" | "DELETE" | "UNKNOWN" | string;
+  export type TaskAssistPlanStepDescriptionString = string;
+  export type TaskAssistPlanStepEndLineInteger = number;
+  export type TaskAssistPlanStepFilePathString = string;
+  export type TaskAssistPlanStepStartLineInteger = number;
   export interface TaskAssistPlanningUploadContext {
     conversationId: ConversationId;
   }
@@ -538,29 +1307,176 @@ declare namespace CodeWhispererBearerTokenClient {
     codeCoverageEvent?: CodeCoverageEvent;
     userModificationEvent?: UserModificationEvent;
     codeScanEvent?: CodeScanEvent;
+    codeScanSucceededEvent?: CodeScanSucceededEvent;
+    codeScanFailedEvent?: CodeScanFailedEvent;
+    codeScanRemediationsEvent?: CodeScanRemediationsEvent;
+    codeFixGenerationEvent?: CodeFixGenerationEvent;
+    codeFixAcceptanceEvent?: CodeFixAcceptanceEvent;
     metricData?: MetricData;
     chatAddMessageEvent?: ChatAddMessageEvent;
     chatInteractWithMessageEvent?: ChatInteractWithMessageEvent;
     chatUserModificationEvent?: ChatUserModificationEvent;
+    terminalUserInteractionEvent?: TerminalUserInteractionEvent;
+    featureDevEvent?: FeatureDevEvent;
+    featureDevCodeGenerationEvent?: FeatureDevCodeGenerationEvent;
+    featureDevCodeAcceptanceEvent?: FeatureDevCodeAcceptanceEvent;
+    inlineChatEvent?: InlineChatEvent;
+    transformEvent?: TransformEvent;
+    docGenerationEvent?: DocGenerationEvent;
+    docV2GenerationEvent?: DocV2GenerationEvent;
+    docV2AcceptanceEvent?: DocV2AcceptanceEvent;
+    testGenerationEvent?: TestGenerationEvent;
   }
-  export interface TextDocument {
-    relativeFilePath: TextDocumentRelativeFilePathString;
+  export type TenantId = string;
+  export interface TerminalUserInteractionEvent {
+    terminalUserInteractionEventType?: TerminalUserInteractionEventType;
+    terminal?: String;
+    terminalVersion?: String;
+    shell?: String;
+    shellVersion?: String;
+    duration?: Integer;
+    timeToSuggestion?: Integer;
+    isCompletionAccepted?: Boolean;
+    cliToolCommand?: String;
+  }
+  export type TerminalUserInteractionEventType = "CODEWHISPERER_TERMINAL_TRANSLATION_ACTION" | "CODEWHISPERER_TERMINAL_COMPLETION_INSERTED" | string;
+  export interface TestGenerationEvent {
+    jobId: UUID;
+    groupName: TestGenerationJobGroupName;
+    timestamp?: Timestamp;
+    ideCategory?: IdeCategory;
     programmingLanguage?: ProgrammingLanguage;
+    numberOfUnitTestCasesGenerated?: Integer;
+    numberOfUnitTestCasesAccepted?: Integer;
+    linesOfCodeGenerated?: Integer;
+    linesOfCodeAccepted?: Integer;
+    charsOfCodeGenerated?: Integer;
+    charsOfCodeAccepted?: Integer;
+  }
+  export interface TestGenerationJob {
+    testGenerationJobId: UUID;
+    testGenerationJobGroupName: TestGenerationJobGroupName;
+    status: TestGenerationJobStatus;
+    shortAnswer?: SensitiveString;
+    creationTime: Timestamp;
+    progressRate?: TestGenerationJobProgressRateInteger;
+    jobStatusReason?: String;
+    jobSummary?: TestGenerationJobJobSummaryString;
+    jobPlan?: TestGenerationJobJobPlanString;
+    packageInfoList?: PackageInfoList;
+  }
+  export type TestGenerationJobGroupName = string;
+  export type TestGenerationJobJobPlanString = string;
+  export type TestGenerationJobJobSummaryString = string;
+  export type TestGenerationJobProgressRateInteger = number;
+  export type TestGenerationJobStatus = "IN_PROGRESS" | "FAILED" | "COMPLETED" | string;
+  export interface TextDocument {
+    /**
+     * Filepath relative to the root of the workspace
+     */
+    relativeFilePath: TextDocumentRelativeFilePathString;
+    /**
+     * The text document's language identifier.
+     */
+    programmingLanguage?: ProgrammingLanguage;
+    /**
+     * Content of the text document
+     */
     text?: TextDocumentTextString;
+    /**
+     * DocumentSymbols parsed from a text document
+     */
     documentSymbols?: DocumentSymbols;
   }
   export interface TextDocumentDiagnostic {
+    /**
+     * Represents a Text Document associated with Diagnostic
+     */
     document: TextDocument;
+    /**
+     * The range at which the message applies.
+     */
     range: Range;
+    /**
+     * A human-readable string describing the source of the diagnostic
+     */
     source: SensitiveString;
+    /**
+     * Diagnostic Error type
+     */
     severity: DiagnosticSeverity;
+    /**
+     * The diagnostic's message.
+     */
     message: TextDocumentDiagnosticMessageString;
   }
   export type TextDocumentDiagnosticMessageString = string;
   export type TextDocumentRelativeFilePathString = string;
   export type TextDocumentTextString = string;
-  export type TimeBetweenChunks = Double[];
   export type Timestamp = Date;
+  export interface Tool {
+    toolSpecification?: ToolSpecification;
+  }
+  export type ToolDescription = string;
+  export interface ToolInputSchema {
+    json?: SensitiveDocument;
+  }
+  export type ToolName = string;
+  export interface ToolResult {
+    toolUseId: ToolUseId;
+    /**
+     * Content of the tool result.
+     */
+    content: ToolResultContent;
+    status?: ToolResultStatus;
+  }
+  export type ToolResultContent = ToolResultContentBlock[];
+  export interface ToolResultContentBlock {
+    /**
+     * A tool result that is text.
+     */
+    text?: ToolResultContentBlockTextString;
+    /**
+     * A tool result that is JSON format data.
+     */
+    json?: SensitiveDocument;
+  }
+  export type ToolResultContentBlockTextString = string;
+  export type ToolResultStatus = "success" | "error" | string;
+  export type ToolResults = ToolResult[];
+  export interface ToolSpecification {
+    inputSchema: ToolInputSchema;
+    name: ToolName;
+    description?: ToolDescription;
+  }
+  export interface ToolUse {
+    toolUseId: ToolUseId;
+    name: ToolName;
+    /**
+     * The input to pass to the tool.
+     */
+    input: SensitiveDocument;
+  }
+  export type ToolUseId = string;
+  export type ToolUses = ToolUse[];
+  export type Tools = Tool[];
+  export interface TransformEvent {
+    jobId: TransformationJobId;
+    timestamp?: Timestamp;
+    ideCategory?: IdeCategory;
+    programmingLanguage?: ProgrammingLanguage;
+    linesOfCodeChanged?: Integer;
+    charsOfCodeChanged?: Integer;
+    linesOfCodeSubmitted?: Integer;
+  }
+  export type TransformationDotNetRuntimeEnv = "NET_5_0" | "NET_6_0" | "NET_7_0" | "NET_8_0" | "NET_9_0" | "NET_STANDARD_2_0" | string;
+  export interface TransformationDownloadArtifact {
+    downloadArtifactType?: TransformationDownloadArtifactType;
+    downloadArtifactId?: ArtifactId;
+  }
+  export type TransformationDownloadArtifactType = "ClientInstructions" | "Logs" | "GeneratedCode" | string;
+  export type TransformationDownloadArtifacts = TransformationDownloadArtifact[];
+  export type TransformationJavaRuntimeEnv = "JVM_8" | "JVM_11" | "JVM_17" | "JVM_21" | string;
   export interface TransformationJob {
     jobId?: TransformationJobId;
     transformationSpec?: TransformationSpec;
@@ -571,9 +1487,15 @@ declare namespace CodeWhispererBearerTokenClient {
     endExecutionTime?: Timestamp;
   }
   export type TransformationJobId = string;
-  export type TransformationLanguage = "JAVA_8"|"JAVA_11"|"JAVA_17"|string;
+  export type TransformationLanguage = "JAVA_8" | "JAVA_11" | "JAVA_17" | "JAVA_21" | "C_SHARP" | "COBOL" | "PL_I" | "JCL" | string;
+  export type TransformationLanguages = TransformationLanguage[];
+  export type TransformationMainframeRuntimeEnv = "MAINFRAME" | string;
+  export type TransformationOperatingSystemFamily = "WINDOWS" | "LINUX" | string;
   export interface TransformationPlan {
     transformationSteps: TransformationSteps;
+  }
+  export interface TransformationPlatformConfig {
+    operatingSystemFamily?: TransformationOperatingSystemFamily;
   }
   export interface TransformationProgressUpdate {
     name: String;
@@ -581,17 +1503,33 @@ declare namespace CodeWhispererBearerTokenClient {
     description?: String;
     startTime?: Timestamp;
     endTime?: Timestamp;
+    downloadArtifacts?: TransformationDownloadArtifacts;
   }
-  export type TransformationProgressUpdateStatus = "IN_PROGRESS"|"COMPLETED"|"FAILED"|string;
+  export type TransformationProgressUpdateStatus = "IN_PROGRESS" | "COMPLETED" | "FAILED" | "PAUSED" | "AWAITING_CLIENT_ACTION" | "SKIPPED" | string;
+  export interface TransformationProjectArtifactDescriptor {
+    sourceCodeArtifact?: TransformationSourceCodeArtifactDescriptor;
+  }
   export interface TransformationProjectState {
     language?: TransformationLanguage;
+    runtimeEnv?: TransformationRuntimeEnv;
+    platformConfig?: TransformationPlatformConfig;
+    projectArtifact?: TransformationProjectArtifactDescriptor;
+  }
+  export interface TransformationRuntimeEnv {
+    java?: TransformationJavaRuntimeEnv;
+    dotNet?: TransformationDotNetRuntimeEnv;
+    mainframe?: TransformationMainframeRuntimeEnv;
+  }
+  export interface TransformationSourceCodeArtifactDescriptor {
+    languages?: TransformationLanguages;
+    runtimeEnv?: TransformationRuntimeEnv;
   }
   export interface TransformationSpec {
     transformationType?: TransformationType;
     source?: TransformationProjectState;
     target?: TransformationProjectState;
   }
-  export type TransformationStatus = "CREATED"|"ACCEPTED"|"REJECTED"|"STARTED"|"PREPARING"|"PREPARED"|"PLANNING"|"PLANNED"|"TRANSFORMING"|"TRANSFORMED"|"FAILED"|"COMPLETED"|"PARTIALLY_COMPLETED"|"STOPPING"|"STOPPED"|string;
+  export type TransformationStatus = "CREATED" | "ACCEPTED" | "REJECTED" | "STARTED" | "PREPARING" | "PREPARED" | "PLANNING" | "PLANNED" | "TRANSFORMING" | "TRANSFORMED" | "FAILED" | "COMPLETED" | "PARTIALLY_COMPLETED" | "STOPPING" | "STOPPED" | "PAUSED" | "RESUMED" | string;
   export interface TransformationStep {
     id: StepId;
     name: String;
@@ -601,15 +1539,26 @@ declare namespace CodeWhispererBearerTokenClient {
     startTime?: Timestamp;
     endTime?: Timestamp;
   }
-  export type TransformationStepStatus = "CREATED"|"COMPLETED"|"PARTIALLY_COMPLETED"|"STOPPED"|"FAILED"|string;
+  export type TransformationStepStatus = "CREATED" | "COMPLETED" | "PARTIALLY_COMPLETED" | "STOPPED" | "FAILED" | "PAUSED" | "SKIPPED" | string;
   export type TransformationSteps = TransformationStep[];
-  export type TransformationType = "LANGUAGE_UPGRADE"|string;
+  export type TransformationType = "LANGUAGE_UPGRADE" | "DOCUMENT_GENERATION" | string;
+  export type TransformationUploadArtifactType = "Dependencies" | "ClientBuildResult" | string;
+  export interface TransformationUploadContext {
+    jobId: TransformationJobId;
+    uploadArtifactType: TransformationUploadArtifactType;
+  }
+  export type TransformationUserActionStatus = "COMPLETED" | "REJECTED" | string;
   export type UUID = string;
   export interface UploadContext {
     taskAssistPlanningUploadContext?: TaskAssistPlanningUploadContext;
+    transformationUploadContext?: TransformationUploadContext;
+    codeAnalysisUploadContext?: CodeAnalysisUploadContext;
+    codeFixUploadContext?: CodeFixUploadContext;
+    workspaceContextUploadContext?: WorkspaceContextUploadContext;
   }
   export type UploadId = string;
-  export type UploadIntent = "TRANSFORMATION"|"TASK_ASSIST_PLANNING"|string;
+  export type UploadIntent = "TRANSFORMATION" | "TASK_ASSIST_PLANNING" | "AUTOMATIC_FILE_SECURITY_SCAN" | "FULL_PROJECT_SECURITY_SCAN" | "UNIT_TESTS_GENERATION" | "CODE_FIX_GENERATION" | "WORKSPACE_CONTEXT" | string;
+  export type Url = string;
   export interface UserContext {
     ideCategory: IdeCategory;
     operatingSystem: OperatingSystem;
@@ -619,16 +1568,71 @@ declare namespace CodeWhispererBearerTokenClient {
   }
   export type UserContextProductString = string;
   export interface UserInputMessage {
+    /**
+     * The content of the chat message.
+     */
     content: UserInputMessageContentString;
+    /**
+     * Chat message context associated with the Chat Message.
+     */
     userInputMessageContext?: UserInputMessageContext;
+    /**
+     * User Intent.
+     */
     userIntent?: UserIntent;
+    /**
+     * User Input Origin.
+     */
+    origin?: Origin;
   }
   export type UserInputMessageContentString = string;
   export interface UserInputMessageContext {
+    /**
+     * Editor state chat message context.
+     */
     editorState?: EditorState;
+    /**
+     * Shell state chat message context.
+     */
+    shellState?: ShellState;
+    /**
+     * Git state chat message context.
+     */
+    gitState?: GitState;
+    /**
+     * Environment state chat message context.
+     */
+    envState?: EnvState;
+    /**
+     * The state of a user's AppStudio UI when sending a message.
+     */
+    appStudioContext?: AppStudioState;
+    /**
+     * Diagnostic chat message context.
+     */
     diagnostic?: Diagnostic;
+    /**
+     * Contextual information about the environment from which the user is calling.
+     */
+    consoleState?: ConsoleState;
+    /**
+     * Settings information, e.g., whether the user has enabled cross-region API calls.
+     */
+    userSettings?: UserSettings;
+    /**
+     * List of additional contextual content entries that can be included with the message.
+     */
+    additionalContext?: AdditionalContentList;
+    /**
+     * ToolResults for the requested ToolUses.
+     */
+    toolResults?: ToolResults;
+    /**
+     * Tools that can be used.
+     */
+    tools?: Tools;
   }
-  export type UserIntent = "SUGGEST_ALTERNATE_IMPLEMENTATION"|"APPLY_COMMON_BEST_PRACTICES"|"IMPROVE_CODE"|"SHOW_EXAMPLES"|"CITE_SOURCES"|"EXPLAIN_LINE_BY_LINE"|"EXPLAIN_CODE_SELECTION"|string;
+  export type UserIntent = "SUGGEST_ALTERNATE_IMPLEMENTATION" | "APPLY_COMMON_BEST_PRACTICES" | "IMPROVE_CODE" | "SHOW_EXAMPLES" | "CITE_SOURCES" | "EXPLAIN_LINE_BY_LINE" | "EXPLAIN_CODE_SELECTION" | "GENERATE_CLOUDFORMATION_TEMPLATE" | "GENERATE_UNIT_TESTS" | "CODE_GENERATION" | string;
   export interface UserModificationEvent {
     sessionId: UUID;
     requestId: UUID;
@@ -636,6 +1640,11 @@ declare namespace CodeWhispererBearerTokenClient {
     modificationPercentage: Double;
     customizationArn?: CustomizationArn;
     timestamp: Timestamp;
+    acceptedCharacterCount: PrimitiveInteger;
+    unmodifiedAcceptedCharacterCount: PrimitiveInteger;
+  }
+  export interface UserSettings {
+    hasConsentedToCrossRegionCalls?: Boolean;
   }
   export interface UserTriggerDecisionEvent {
     sessionId: UUID;
@@ -650,16 +1659,44 @@ declare namespace CodeWhispererBearerTokenClient {
     suggestionReferenceCount?: PrimitiveInteger;
     generatedLine?: PrimitiveInteger;
     numberOfRecommendations?: PrimitiveInteger;
+    perceivedLatencyMilliseconds?: Double;
+    acceptedCharacterCount?: PrimitiveInteger;
+  }
+  export interface WorkspaceContext {
+    toggle: OptInFeatureToggle;
+  }
+  export interface WorkspaceContextUploadContext {
+    workspaceId: UUID;
+    relativePath: SensitiveString;
+    programmingLanguage: ProgrammingLanguage;
+  }
+  export type WorkspaceList = WorkspaceMetadata[];
+  export interface WorkspaceMetadata {
+    workspaceId: UUID;
+    workspaceStatus: WorkspaceStatus;
+    environmentAddress?: SensitiveString;
+    environmentId?: SensitiveString;
   }
   export interface WorkspaceState {
+    /**
+     * Upload ID representing an Upload using a PreSigned URL
+     */
     uploadId: UploadId;
+    /**
+     * Primary programming language of the Workspace
+     */
     programmingLanguage: ProgrammingLanguage;
+    /**
+     * Workspace context truncation schemes based on usecase
+     */
     contextTruncationScheme?: ContextTruncationScheme;
   }
+  export type WorkspaceStatus = "CREATED" | "PENDING" | "READY" | "CONNECTED" | "DELETING" | string;
+  export type timeBetweenChunks = Double[];
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */
-  export type apiVersion = "2022-11-11"|"latest"|string;
+  export type apiVersion = "2022-11-11" | "latest" | string;
   export interface ClientApiVersions {
     /**
      * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
@@ -673,5 +1710,3 @@ declare namespace CodeWhispererBearerTokenClient {
   export import Types = CodeWhispererBearerTokenClient;
 }
 export = CodeWhispererBearerTokenClient;
-
-    

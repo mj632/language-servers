@@ -58,6 +58,7 @@ export interface ClientRegistration {
     readonly scopes?: string[]
 }
 
+export type LoginType = 'builderId' | 'idc'
 export interface SsoProfile {
     readonly region: string
     readonly startUrl: string
@@ -65,9 +66,11 @@ export interface SsoProfile {
     readonly roleName?: string
     readonly scopes?: string[]
     readonly identifier?: string
+    readonly loginType: LoginType
 }
 
 export const builderIdStartUrl = 'https://view.awsapps.com/start'
+export const idcStartUrl = 'https://amzn.awsapps.com/start'
 
 export async function openSsoPortalLink(
     startUrl: string,
@@ -82,7 +85,7 @@ export async function openSsoPortalLink(
     }
 
     async function showLoginNotification() {
-        const name = startUrl === builderIdStartUrl ? 'builderId' : 'foo'
+        const name = startUrl === builderIdStartUrl ? 'BuilderID' : 'Identity Center'
         const title = `Copy Code for ${name}`
         const detail = `To proceed, open the login page and provide this code to confirm the access request: ${authorization.userCode}`
 
